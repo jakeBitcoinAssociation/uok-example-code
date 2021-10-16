@@ -22,7 +22,7 @@
               "apps/lecture5/src/assets"
             ],
             "styles": ["apps/lecture5/src/styles.scss"],
-            "scripts": []
+            "scripts": ["./node_modules/bsv/bin/bsv.js"]
           },
           "configurations": {
             "production": {
