@@ -1,6 +1,126 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "lecture5": {
+      "projectType": "application",
+      "root": "apps/lecture5",
+      "sourceRoot": "apps/lecture5/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/lecture5",
+            "index": "apps/lecture5/src/index.html",
+            "main": "apps/lecture5/src/main.ts",
+            "polyfills": "apps/lecture5/src/polyfills.ts",
+            "tsConfig": "apps/lecture5/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/lecture5/src/favicon.ico",
+              "apps/lecture5/src/assets"
+            ],
+            "styles": ["apps/lecture5/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/lecture5/src/environments/environment.ts",
+                  "with": "apps/lecture5/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "lecture5:build:production"
+            },
+            "development": {
+              "browserTarget": "lecture5:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "lecture5:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/lecture5/src/**/*.ts",
+              "apps/lecture5/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/lecture5"],
+          "options": {
+            "jestConfig": "apps/lecture5/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lecture5-e2e": {
+      "root": "apps/lecture5-e2e",
+      "sourceRoot": "apps/lecture5-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/lecture5-e2e/cypress.json",
+            "devServerTarget": "lecture5:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "lecture5:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/lecture5-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
@@ -19,5 +139,6 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "lecture5"
 }
