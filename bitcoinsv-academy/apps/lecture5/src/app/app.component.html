@@ -2,7 +2,19 @@
   <h1>Welcome to {{ title }}!</h1>
 </header>
 <main>
-    <p>Get Random Buffer (displayed in hex):<br><br> {{ hex }}</p>
+    <h2>Big Numbers!</h2>
+    <h3>Let's create a big number and then do some basic arithmetic with it.</h3>
+    <h4>Get Random Buffer (displayed in hex):</h4>
+    <code>hex = Random.getRandomBuffer(32).toString('hex');<br>
+        Result: {{ hex_output }}</code>
+    <br><br>
+    <h4>Create a big number using our above hex value:</h4>
+    <code>bn = Bn.fromBuffer(hex);<br>
+        Result: {{ bn_output }}</code>
+    <br><br>
+    <h4>Add 1 in big number format to our above big number</h4>
+    <code>bx = bn.add(new Bn(1));<br>
+        Result: {{ bx_output }}</code>
 </main>
 
 <router-outlet></router-outlet>
