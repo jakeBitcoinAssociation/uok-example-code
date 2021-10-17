@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@ts-bitcoin/core": "^2.2.0"
+  }
+}
