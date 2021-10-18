@@ -8,10 +8,11 @@ import { PointsAndEllipticCurvesComponent } from './components/points-and-ellipt
 import { HashFunctionsComponent } from './components/hash-functions/hash-functions.component';
 
 export const bigNumbersRoutes: Route[] = [
-  { path: 'big-numbers', component: Lecture5LibraryComponent },
-  { path: 'number-formats', component: NumberFormatsComponent },
-  { path: 'points-and-elliptic-curves', component: PointsAndEllipticCurvesComponent },
-  { path: 'hash-functions', component: HashFunctionsComponent }
+    { path: '', redirectTo: 'big-numbers', pathMatch: 'full' },
+    { path: 'big-numbers', component: Lecture5LibraryComponent },
+    { path: 'number-formats', component: NumberFormatsComponent },
+    { path: 'points-and-elliptic-curves', component: PointsAndEllipticCurvesComponent },
+    { path: 'hash-functions', component: HashFunctionsComponent }
 ];
 
 @NgModule({
