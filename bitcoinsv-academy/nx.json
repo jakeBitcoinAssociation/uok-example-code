@@ -27,6 +27,15 @@
     ]
   },
   "projects": {
+    "auth": {
+      "tags": []
+    },
+    "big-numbers": {
+      "tags": []
+    },
+    "data-models": {
+      "tags": []
+    },
     "lecture5": {
       "tags": []
     },

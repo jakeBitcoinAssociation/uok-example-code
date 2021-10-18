@@ -1,6 +1,81 @@
 {
   "version": 2,
   "projects": {
+    "auth": {
+      "projectType": "library",
+      "root": "libs/auth",
+      "sourceRoot": "libs/auth/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth"],
+          "options": {
+            "jestConfig": "libs/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/src/**/*.ts",
+              "libs/auth/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "big-numbers": {
+      "projectType": "library",
+      "root": "libs/big-numbers",
+      "sourceRoot": "libs/big-numbers/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/big-numbers"],
+          "options": {
+            "jestConfig": "libs/big-numbers/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/big-numbers/src/**/*.ts",
+              "libs/big-numbers/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "data-models": {
+      "projectType": "library",
+      "root": "libs/data-models",
+      "sourceRoot": "libs/data-models/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-models"],
+          "options": {
+            "jestConfig": "libs/data-models/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/data-models/src/**/*.ts",
+              "libs/data-models/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "lecture5": {
       "projectType": "application",
       "root": "apps/lecture5",
@@ -9,9 +84,7 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/lecture5",
             "index": "apps/lecture5/src/index.html",
@@ -91,9 +164,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/lecture5"
-          ],
+          "outputs": ["coverage/apps/lecture5"],
           "options": {
             "jestConfig": "apps/lecture5/jest.config.js",
             "passWithNoTests": true
@@ -120,13 +191,9 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/lecture5-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/lecture5-e2e/**/*.{js,ts}"]
           }
         }
       }
