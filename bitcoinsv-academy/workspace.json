@@ -26,31 +26,6 @@
         }
       }
     },
-    "big-numbers": {
-      "projectType": "library",
-      "root": "libs/big-numbers",
-      "sourceRoot": "libs/big-numbers/src",
-      "prefix": "bitcoinsv-academy",
-      "targets": {
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/big-numbers"],
-          "options": {
-            "jestConfig": "libs/big-numbers/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/big-numbers/src/**/*.ts",
-              "libs/big-numbers/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
     "data-models": {
       "projectType": "library",
       "root": "libs/data-models",
@@ -71,6 +46,31 @@
             "lintFilePatterns": [
               "libs/data-models/src/**/*.ts",
               "libs/data-models/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "layout": {
+      "projectType": "library",
+      "root": "libs/layout",
+      "sourceRoot": "libs/layout/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/layout"],
+          "options": {
+            "jestConfig": "libs/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/layout/src/**/*.ts",
+              "libs/layout/src/**/*.html"
             ]
           }
         }
@@ -194,6 +194,56 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/lecture5-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "lecture5-library": {
+      "projectType": "library",
+      "root": "libs/lecture5-library",
+      "sourceRoot": "libs/lecture5-library/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lecture5-library"],
+          "options": {
+            "jestConfig": "libs/lecture5-library/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/lecture5-library/src/**/*.ts",
+              "libs/lecture5-library/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/material"],
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material/src/**/*.ts",
+              "libs/material/src/**/*.html"
+            ]
           }
         }
       }

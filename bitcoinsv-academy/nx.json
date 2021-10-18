@@ -30,10 +30,10 @@
     "auth": {
       "tags": []
     },
-    "big-numbers": {
+    "data-models": {
       "tags": []
     },
-    "data-models": {
+    "layout": {
       "tags": []
     },
     "lecture5": {
@@ -42,6 +42,12 @@
     "lecture5-e2e": {
       "tags": [],
       "implicitDependencies": ["lecture5"]
+    },
+    "lecture5-library": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
     }
   }
 }

@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Address, Bn, KeyPair, PrivKey, TxBuilder, TxOut, Random } from '@ts-bitcoin/core';
+import {
+  Address,
+  Bn,
+  KeyPair,
+  PrivKey,
+  TxBuilder,
+  TxOut,
+  Random,
+} from '@ts-bitcoin/core';
 
 @Component({
   selector: 'bitcoinsv-academy-big-numbers',
   templateUrl: './big-numbers.component.html',
-  styleUrls: ['./big-numbers.component.scss']
+  styleUrls: ['./big-numbers.component.scss'],
 })
-export class BigNumbersComponent {
-
+export class Lecture5LibraryComponent {
   //Get random buffer and display it in hex
   hex = Random.getRandomBuffer(32);
   hex_output = this.hex.toString('hex');
@@ -20,5 +26,4 @@ export class BigNumbersComponent {
   //Add 1 to our big number
   bx = this.bn.add(new Bn(1));
   bx_output = this.bx.toString(16);
-
 }

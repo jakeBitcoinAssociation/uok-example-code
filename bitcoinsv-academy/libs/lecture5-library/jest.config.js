@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'big-numbers',
+  displayName: 'lecture5-library',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/libs/big-numbers',
+  coverageDirectory: '../../coverage/libs/lecture5-library',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

@@ -3,23 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { BigNumbersComponent } from './features/big-numbers/big-numbers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { authRoutes, AuthModule } from '@bitcoinsv-academy/auth';
-
+import {
+  bigNumbersRoutes,
+  Lecture5LibraryModule,
+} from '@bitcoinsv-academy/lecture5-library';
 
 @NgModule({
-  declarations: [AppComponent, BigNumbersComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([{path: 'auth', children: authRoutes}], { initialNavigation: 'enabledBlocking' }),
-    AuthModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(
+      [
+        { path: '', pathMatch: 'full', redirectTo: 'big-numbers' },
+        { path: 'lecture5', children: bigNumbersRoutes },
+        { path: 'auth', children: authRoutes },
+      ],
+      { initialNavigation: 'enabled' }
+    ),
+    AuthModule,
+    Lecture5LibraryModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [
-    BigNumbersComponent
-  ],
 })
 export class AppModule {}
