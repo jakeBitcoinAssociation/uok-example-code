@@ -5,11 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent {
 
-  constructor() { }
+ navigation = [
+    { link: '/lecture5/big-numbers', label: 'Big Numbers' },
+    { link: '/lecture5/number-formats', label: 'Number Formats' },
+    { link: '/lecture5/points-and-elliptic-curves', label: 'Points and Elliptic Curves' },
+    { link: '/lecture5/hash-functions', label: 'Hash Functions' }
+  ];
+  navigationSideMenu = [
+    ...this.navigation,
+    { link: 'settings', label: 'settings' }
+  ];
 
-  ngOnInit(): void {
-  }
 
 }
