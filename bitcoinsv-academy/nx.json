@@ -27,12 +27,27 @@
     ]
   },
   "projects": {
+    "auth": {
+      "tags": []
+    },
+    "data-models": {
+      "tags": []
+    },
+    "layout": {
+      "tags": []
+    },
     "lecture5": {
       "tags": []
     },
     "lecture5-e2e": {
       "tags": [],
       "implicitDependencies": ["lecture5"]
+    },
+    "lecture5-library": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
     }
   }
 }
