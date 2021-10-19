@@ -1,1 +1,68 @@
-<p>hash-functions works!</p>
+<mat-card>
+
+    <mat-card-title><h2>Big Numbers!</h2></mat-card-title>
+    <h3>Let's create a big number and then do some basic arithmetic with it.</h3>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate a SHA256 hash</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    sha256 = Hash.sha256(Buffer.from('high entropy information is innovation'));
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ sha256 }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+        <!-- <mat-card>
+            <mat-card-title>
+                <h4>Generate a ripemd160 hash</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    ripemd160 = Hash.ripemd160(Buffer.from('BSV is the low entropy substrate for high entropy innovation'));
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ ripemd160 }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate a HASH256 hash</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    hash256 = Hash.sha256(Buffer.from(this.sha256.toString()))
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ hash256 }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate a HASH160 hash</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    hash160 = Hash.ripemd160(Buffer.from(this.sha256.toString()))
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ hash160 }}
+                </code>
+            </mat-card-content>
+        </mat-card>-->
+    </mat-card-content>
+
+</mat-card>
