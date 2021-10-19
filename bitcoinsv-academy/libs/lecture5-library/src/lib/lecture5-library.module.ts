@@ -9,8 +9,8 @@ import { HashFunctionsComponent } from './components/hash-functions/hash-functio
 
 export const bigNumbersRoutes: Route[] = [
     { path: '', redirectTo: 'big-numbers', pathMatch: 'full' },
-    { path: 'big-numbers', component: Lecture5LibraryComponent },
     { path: 'number-formats', component: NumberFormatsComponent },
+    { path: 'big-numbers', component: Lecture5LibraryComponent },
     { path: 'points-and-elliptic-curves', component: PointsAndEllipticCurvesComponent },
     { path: 'hash-functions', component: HashFunctionsComponent }
 ];

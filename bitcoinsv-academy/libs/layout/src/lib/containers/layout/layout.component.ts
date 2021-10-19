@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bitcoinsv-academy-layout',
@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent {
 
  navigation = [
-    { link: '/lecture5/big-numbers', label: 'Big Numbers' },
     { link: '/lecture5/number-formats', label: 'Number Formats' },
+    { link: '/lecture5/big-numbers', label: 'Big Numbers' },
     { link: '/lecture5/points-and-elliptic-curves', label: 'Points and Elliptic Curves' },
     { link: '/lecture5/hash-functions', label: 'Hash Functions' }
   ];
