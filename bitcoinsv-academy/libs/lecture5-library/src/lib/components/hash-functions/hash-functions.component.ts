@@ -7,7 +7,7 @@ import {
   TxBuilder,
   TxOut,
   Random,
-  Hash
+  Hash,
 } from '@ts-bitcoin/core';
 
 @Component({
@@ -18,16 +18,17 @@ import {
 export class HashFunctionsComponent {
 
     // Generate a SHA256 hash
-    sha256 = Hash.sha256(Buffer.from('high entropy information is innovation'));
+
+    sha256 = Hash.sha256(Random.getRandomBuffer(32));
 
     // Generate a RIPEMD160 hash
-    ripemd160 = Hash.ripemd160(Buffer.from('BSV is the low entropy substrate for high entropy innovation'));
+    ripemd160 = Hash.ripemd160(Random.getRandomBuffer(32));
 
     // Generate a HASH256 hash
-    hash256 = Hash.sha256(Buffer.from(this.sha256))
+    hash256 = Hash.sha256Sha256(Random.getRandomBuffer(32));
 
     // Generate a HASH160 hash
-    hash160 = Hash.ripemd160(Buffer.from(this.sha256))
+    hash160 = Hash.sha256Ripemd160(Random.getRandomBuffer(32));
 
 
 
