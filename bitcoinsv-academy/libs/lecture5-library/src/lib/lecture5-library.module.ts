@@ -9,6 +9,7 @@ import { HashFunctionsComponent } from './components/hash-functions/hash-functio
 import { BigLittleEndianComponent } from './components/number-formats/big-little-endian/big-little-endian.component';
 import { SignMagnitudeComponent } from './components/number-formats/sign-magnitude/sign-magnitude.component';
 import { TwosComplimentComponent } from './components/number-formats/twos-compliment/twos-compliment.component';
+import { FixedPointComponent } from './components/number-formats/fixed-point/fixed-point.component';
 
 export const bigNumbersRoutes: Route[] = [
     { path: '', redirectTo: 'big-numbers', pathMatch: 'full' },
@@ -27,7 +28,8 @@ export const bigNumbersRoutes: Route[] = [
       HashFunctionsComponent,
       BigLittleEndianComponent,
       SignMagnitudeComponent,
-      TwosComplimentComponent
+      TwosComplimentComponent,
+      FixedPointComponent
   ],
 })
 export class Lecture5LibraryModule {}

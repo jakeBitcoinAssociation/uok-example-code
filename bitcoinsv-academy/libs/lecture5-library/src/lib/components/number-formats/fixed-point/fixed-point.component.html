@@ -1,0 +1,26 @@
+        <mat-card>
+            <mat-card-title>
+                <h4>Satoshis expressed as unsigned integers</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    allTheSatoshis: number;<br>
+                    halfTheSatoshis: number;<br><br>
+
+                    constructor() {{ '{' }}<br>
+
+                    &nbsp;this.allTheSatoshis = 0x1406F40;<br>
+                    &nbsp;this.halfTheSatoshis = this.allTheSatoshis*0.5<br>
+                    {{ '}' }}
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    <div>Result</div>
+                    <div>All the satoshis (binary): {{ allTheSatoshis.toString(2) }}</div>
+                    <div>All the satoshis (hex): {{ allTheSatoshis.toString(16) }}</div><br>
+                    <div>Half the satoshis (binary): {{ halfTheSatoshis.toString(2) }}</div>
+                    <div>Half the satoshis (hex): {{ halfTheSatoshis.toString(16) }}</div>
+                </code>
+            </mat-card-content>
+        </mat-card>

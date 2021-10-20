@@ -4,6 +4,19 @@
             </mat-card-title>
             <mat-card-content>
                 <code>
+                    posNum
+                    negNum
+
+                    constructor() {{ '{' }}<br>
+                    &nbsp;this.posNum = new Uint32Array(4);<br>
+                    &nbsp;this.negNum = new Uint32Array(4);<br>
+
+                    &nbsp;this.posNum[0] = 0xF3;<br>
+                    &nbsp;this.negNum[0] = 0xF3;<br>
+
+                    &nbsp;this.negNum[0] = this.negNum[0]*-1;<br>
+
+                    {{ '}' }}
                 </code>
             </mat-card-content>
             <mat-card-content>
