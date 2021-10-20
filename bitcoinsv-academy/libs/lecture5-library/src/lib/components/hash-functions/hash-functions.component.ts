@@ -30,7 +30,7 @@ export class HashFunctionsComponent {
 
     // Generate a HASH160 hash
     hash160 = Hash.sha256Ripemd160(Buffer.from('BSV is the high entropy information highway'));
-    hash160Test = Hash.ripemd160(this.ripemd160);
+    hash160Test = Hash.ripemd160(this.sha256);
 
 
 
