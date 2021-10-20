@@ -11,6 +11,7 @@ import { SignMagnitudeComponent } from './components/number-formats/sign-magnitu
 import { TwosComplimentComponent } from './components/number-formats/twos-compliment/twos-compliment.component';
 import { FixedPointComponent } from './components/number-formats/fixed-point/fixed-point.component';
 import { FloatingPointComponent } from './components/number-formats/floating-point/floating-point.component';
+import { StringComponent } from './components/number-formats/string/string.component';
 
 export const bigNumbersRoutes: Route[] = [
     { path: '', redirectTo: 'big-numbers', pathMatch: 'full' },
@@ -31,7 +32,8 @@ export const bigNumbersRoutes: Route[] = [
       SignMagnitudeComponent,
       TwosComplimentComponent,
       FixedPointComponent,
-      FloatingPointComponent
+      FloatingPointComponent,
+      StringComponent
   ],
 })
 export class Lecture5LibraryModule {}

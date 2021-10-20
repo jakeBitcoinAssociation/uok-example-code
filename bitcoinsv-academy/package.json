@@ -25,7 +25,10 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@nrwl/angular": "^12.10.0",
     "@ts-bitcoin/core": "^2.2.0",
+    "@types/buffer-from": "^1.1.0",
     "bsv": "2.0.10",
+    "buffer": "^6.0.3",
+    "buffer-from": "^1.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
