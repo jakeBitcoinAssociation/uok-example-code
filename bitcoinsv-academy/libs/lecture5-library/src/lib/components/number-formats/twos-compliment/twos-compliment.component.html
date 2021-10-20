@@ -4,11 +4,24 @@
             </mat-card-title>
             <mat-card-content>
                 <code>
+                    posNum
+                    negNum
+
+                    constructor() {{ '{' }}<br>
+                    &nbsp;this.posNum = new Uint32Array(4);<br>
+                    &nbsp;this.negNum = new Uint32Array(4);<br>
+
+                    &nbsp;this.posNum[0] = 0xF3;<br>
+                    &nbsp;this.negNum[0] = 0xF3;<br>
+
+                    &nbsp;this.negNum[0] = this.negNum[0]*-1;<br>
+
+                    {{ '}' }}
                 </code>
             </mat-card-content>
             <mat-card-content>
                 <div>Result:</div>
-                <div>243 as a positive binary number: {{ posNum[0].toString(2) }}</div>
+                <div>243 as a positive binary number: {{ "000000000000000000000000" + posNum[0].toString(2) }}</div>
                 <div>243 as a negative binary number: {{ negNum[0].toString(2) }}</div>
             </mat-card-content>
         </mat-card>

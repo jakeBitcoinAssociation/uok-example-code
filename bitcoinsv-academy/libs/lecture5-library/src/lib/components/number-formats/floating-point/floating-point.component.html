@@ -1,0 +1,23 @@
+        <mat-card>
+            <mat-card-title>
+                <h4>Floatoshis -- fictitious floating point numbers</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    allTheSatoshisFloat: number;<br>
+                    halfTheSatoshisFloat: number;<br><br>
+
+                    constructor() {{ '{' }}<br>
+                    &nbsp;this.allTheSatoshisFloat = 2.1/100000000000000;<br>
+                    &nbsp;this.halfTheSatoshisFloat = this.allTheSatoshisFloat*2.0<br>
+                    {{ '}' }}
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    <div>Result</div>
+                    <div>All Floatoshis: {{ allTheSatoshisFloat.toString(10) }}</div>
+                    <div>Half the Floatoshis: {{ halfTheSatoshisFloat.toString(10) }}</div>
+                </code>
+            </mat-card-content>
+        </mat-card>
