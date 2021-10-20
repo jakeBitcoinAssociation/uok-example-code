@@ -57,13 +57,13 @@
             <mat-card-content>
                 <code>
                     hash160 = Hash.sha256Ripemd160(Buffer.from('BSV is the high entropy information highway'));<br>
-                    hash160Test = Hash.ripemd160(this.ripemd160);
+                    hash160Test = Hash.ripemd160(this.sha256);
                 </code>
             </mat-card-content>
             <mat-card-content>
                 <code>
                     Result: {{ hash160.toString('hex') }}<br>
-                    Result: {{ hash160.toString('hex') }}
+                    Result: {{ hash160Test.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
