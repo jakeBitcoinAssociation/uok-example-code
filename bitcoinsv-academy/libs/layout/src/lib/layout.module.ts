@@ -9,4 +9,6 @@ import { RouterModule } from '@angular/router';
   declarations: [LayoutComponent],
   exports: [LayoutComponent]
 })
-export class LayoutModule {}
+export class LayoutModule {
+
+}

@@ -1,0 +1,17 @@
+        <mat-card>
+            <mat-card-title>
+                <h4>Create a big number using our above hex value:</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    bn = Bn.fromBuffer(hex);<br>
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    <div>Result</div>
+                    <div>Positive Big Number in Hex: {{ posBigInt.toString('hex') }}</div>
+                    <div>Negative Big Number in Hex: {{ negBigInt.toString('hex') }}</div>
+                </code>
+            </mat-card-content>
+        </mat-card>

@@ -1,1 +1,72 @@
-<p>points-and-elliptic-curves works!</p>
+<mat-card>
+
+    <mat-card-title><h2>Points and Elliptic Curves</h2></mat-card-title>
+    <h3>Let's create a point using base point G from the secp256k1 koblitz curve
+    and then use it to create a public/private key-pair.</h3>
+
+    <mat-card-content fxLayout="column">
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate base point G</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    G = Point.getG();
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ G.toString() }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+
+       <mat-card>
+            <mat-card-title>
+                <h4>Generate random 32byte hex value</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    phex = Random.getRandomBuffer(32);
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ phex.toString('hex') }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate private key buffer</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    p = Bn.fromBuffer(this.phex)
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ p.toString('hex') }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>
+                <h4>Generate Public key 'P' from P = pG</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    P = G.mul(this.p)
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    Result: {{ P.toString() }}
+                </code>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-card-content>

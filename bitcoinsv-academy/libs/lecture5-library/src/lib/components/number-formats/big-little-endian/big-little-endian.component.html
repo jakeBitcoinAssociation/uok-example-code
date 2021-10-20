@@ -1,0 +1,30 @@
+        <mat-card>
+            <mat-card-title>
+                <h4>Big Endian vs. Little Endian</h4>
+            </mat-card-title>
+            <mat-card-content>
+                <code>
+                    this.bigEndianEight[0] = 0xFF;<br>
+                    this.bigEndianEight = new Uint32Array(32);<br>
+
+                    this.littleEndianEight = new Uint32Array(32);<br>
+                    this.littleEndianEight[0] = this.toLittleEndian(this.bigEndianEight[0]);<br>
+                    <br>
+                    <div>
+                        toLittleEndian (val:any) {{ '{' }}<br>
+                        &nbsp;return ((val & 0xFF) << 24)<br>
+                        &nbsp;| ((val & 0xFF00) << 8)<br>
+                        &nbsp;| ((val >> 8) & 0xFF00)<br>
+                        &nbsp;| ((val >> 24) & 0xFF)<br>
+                        {{ '}' }}<br>
+                    </div>
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
+                    <div>Result:</div>
+                    <div>LittleEndian: {{ littleEndianEight[0].toString(2) }}</div>
+                    <div> BigEndian: {{ "000000000000000000000000" + bigEndianEight[0].toString(2) }}</div>
+                </code>
+            </mat-card-content>
+        </mat-card>

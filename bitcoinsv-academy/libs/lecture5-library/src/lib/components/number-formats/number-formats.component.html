@@ -1,1 +1,25 @@
-<p>number-formats works!</p>
+<mat-card>
+
+    <mat-card-title><h2>Number Formats!</h2></mat-card-title>
+    <h3>Let's experiment with number formats</h3>
+    <div fxLayout="column">
+    <mat-card-content>
+        <mat-tab-group>
+
+            <mat-tab label='Big Endian vs. Little Endian'>
+                <bitcoinsv-academy-big-little-endian></bitcoinsv-academy-big-little-endian>
+            </mat-tab>
+
+            <mat-tab label='Sign-Magnitude'>
+                <bitcoinsv-academy-sign-magnitude></bitcoinsv-academy-sign-magnitude>
+            </mat-tab>
+
+            <mat-tab label="Two&#39;s Complement">
+                <bitcoinsv-academy-twos-compliment></bitcoinsv-academy-twos-compliment>
+            </mat-tab>
+
+        </mat-tab-group>
+    </mat-card-content>
+    </div>
+
+</mat-card>

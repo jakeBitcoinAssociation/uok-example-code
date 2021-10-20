@@ -25,7 +25,7 @@ import { LayoutModule } from '@bitcoinsv-academy/layout';
     ),
     AuthModule,
     Lecture5LibraryModule,
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

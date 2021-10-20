@@ -1,16 +1,20 @@
 <mat-card>
 
     <mat-card-title><h2>Big Numbers!</h2></mat-card-title>
-
+    <h3>Let's create a big number and then do some basic arithmetic with it.</h3>
+    <div fxLayout="column">
     <mat-card-content>
-        <h3>Let's create a big number and then do some basic arithmetic with it.</h3>
         <mat-card>
             <mat-card-title>
                 <h4>Get Random Buffer (displayed in hex):</h4>
             </mat-card-title>
             <mat-card-content>
                 <code>
-                    hex = Random.getRandomBuffer(32).toString('hex');<br />
+                    hex = Random.getRandomBuffer(32).toString('hex');
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
                     Result: {{ hex_output }}
                 </code>
             </mat-card-content>
@@ -22,6 +26,10 @@
             <mat-card-content>
                 <code>
                     bn = Bn.fromBuffer(hex);<br />
+                </code>
+            </mat-card-content>
+            <mat-card-content>
+                <code>
                     Result: {{ bn_output }}
                 </code>
             </mat-card-content>
@@ -38,5 +46,6 @@
             </mat-card-content>
         </mat-card>
     </mat-card-content>
+    </div>
 
 </mat-card>
