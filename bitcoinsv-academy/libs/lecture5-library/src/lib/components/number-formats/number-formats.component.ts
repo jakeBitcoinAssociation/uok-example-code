@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   Address,
   Bn,
@@ -15,7 +15,6 @@ import {
   styleUrls: ['./number-formats.component.scss']
 })
 export class NumberFormatsComponent {
-
 
 
 }

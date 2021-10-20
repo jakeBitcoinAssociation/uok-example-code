@@ -1,37 +1,24 @@
 <mat-card>
 
     <mat-card-title><h2>Number Formats!</h2></mat-card-title>
-    <h3>Let's create a big number and then do some basic arithmetic with it.</h3>
+    <h3>Let's experiment with number formats</h3>
     <div fxLayout="column">
     <mat-card-content>
-        <mat-card>
-            <mat-card-title>
-                <h4></h4>
-            </mat-card-title>
-            <mat-card-content>
-                <code>
-                    hex = Random.getRandomBuffer(32).toString('hex');
-                </code>
-            </mat-card-content>
-            <mat-card-content>
-                <code>
-                </code>
-            </mat-card-content>
-        </mat-card>
-        <mat-card>
-            <mat-card-title>
-                <h4>Create a big number using our above hex value:</h4>
-            </mat-card-title>
-            <mat-card-content>
-                <code>
-                    bn = Bn.fromBuffer(hex);<br />
-                </code>
-            </mat-card-content>
-            <mat-card-content>
-                <code>
-                </code>
-            </mat-card-content>
-        </mat-card>
+        <mat-tab-group>
+
+            <mat-tab label='Big Endian vs. Little Endian'>
+                <bitcoinsv-academy-big-little-endian></bitcoinsv-academy-big-little-endian>
+            </mat-tab>
+
+            <mat-tab label='Sign-Magnitude'>
+                <bitcoinsv-academy-sign-magnitude></bitcoinsv-academy-sign-magnitude>
+            </mat-tab>
+
+            <mat-tab label="Two&#39;s Complement">
+                <bitcoinsv-academy-twos-compliment></bitcoinsv-academy-twos-compliment>
+            </mat-tab>
+
+        </mat-tab-group>
     </mat-card-content>
     </div>
 
