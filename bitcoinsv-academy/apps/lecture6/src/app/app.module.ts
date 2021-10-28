@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthModule } from '@bitcoinsv-academy/auth';
+import { authRoutes, AuthModule } from '@bitcoinsv-academy/auth';
 import { LayoutModule } from '@bitcoinsv-academy/layout';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { LayoutModule } from '@bitcoinsv-academy/layout';
     BrowserAnimationsModule,
     RouterModule.forRoot(
         [
-            { path: '', redirectTo: '/', pathMatch: 'full' }
+        { path: '', redirectTo: '/', pathMatch: 'full' },
+        { path: 'auth', children: authRoutes },
         ],
         { initialNavigation: 'enabled' }),
     AuthModule,
