@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" fxLayout="row">
+<button mat-button [routerLink]="['/']" routerLinkActive="router-link-active">
+        <h1>Lecture 6</h1>
+    </button>
+
+    <div class="right-nav">
+        <button mat-button *ngFor="let item of navigation" [routerLink]="[item.link]" routerLinkActive="active">
+            {{ item.label }}
+        </button>
+    </div>
+</mat-toolbar>
+<ng-content></ng-content>
