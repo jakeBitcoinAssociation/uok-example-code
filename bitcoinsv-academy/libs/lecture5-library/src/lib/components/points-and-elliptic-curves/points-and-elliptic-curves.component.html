@@ -1,69 +1,61 @@
 <mat-card>
 
-    <mat-card-title><h2>Points and Elliptic Curves</h2></mat-card-title>
+    <mat-card-title>Points and Elliptic Curves</mat-card-title>
     <h3>Let's create a point using base point G from the secp256k1 koblitz curve
     and then use it to create a public/private key-pair.</h3>
 
     <mat-card-content fxLayout="column">
         <mat-card>
             <mat-card-title>
-                <h4>Generate base point G</h4>
+                Generate base point G
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     G = Point.getG();
-                </code>
-            </mat-card-content>
-            <mat-card-content>
-                <code>
+                </code></pre>
+                <code style="word-wrap: break-word">
                     Result: {{ G.toString() }}
                 </code>
             </mat-card-content>
         </mat-card>
-
+        <br><br>
        <mat-card>
             <mat-card-title>
-                <h4>Generate random 32byte hex value</h4>
+                Generate random 32byte hex value
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     phex = Random.getRandomBuffer(32);
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ phex.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
-
+        <br><br>
         <mat-card>
             <mat-card-title>
-                <h4>Generate private key buffer</h4>
+                Generate private key buffer
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     p = Bn.fromBuffer(this.phex)
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ p.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
-
+        <br><br>
         <mat-card>
             <mat-card-title>
-                <h4>Generate Public key 'P' from P = pG</h4>
+                Generate Public key 'P' from P = pG
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     P = G.mul(this.p)
-                </code>
-            </mat-card-content>
-            <mat-card-content>
-                <code>
+                </code></pre>
+                <code style="word-wrap: break-word">
                     Result: {{ P.toString() }}
                 </code>
             </mat-card-content>

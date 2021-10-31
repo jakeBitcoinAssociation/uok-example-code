@@ -5,62 +5,57 @@
     <mat-card-content>
         <mat-card>
             <mat-card-title>
-                <h4>Generate a SHA256 hash</h4>
+                Generate a SHA256 hash
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     sha256 = Hash.sha256(Buffer.from('BSV is the high entropy information highway'));
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ sha256.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
+        <br><br>
         <mat-card>
             <mat-card-title>
-                <h4>Generate a ripemd160 hash</h4>
+                Generate a ripemd160 hash
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     ripemd160 = Hash.ripemd160(Buffer.from('BSV is the high entropy information highway'));
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ ripemd160.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
+        <br><br>
         <mat-card>
             <mat-card-title>
-                <h4>Generate a HASH256 hash</h4>
+                Generate a HASH256 hash
             </mat-card-title>
             <mat-card-content>
-                <code>
-                    hash256 = Hash.sha256Sha256(Buffer.from('BSV is the high entropy information highway'));<br>
+                <pre><code>
+                    hash256 = Hash.sha256Sha256(Buffer.from('BSV is the high entropy information highway'));
                     hash256Test = Hash.sha256(this.sha256)
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ hash256.toString('hex') }}<br>
                     Result: {{ hash256Test.toString('hex') }}
                 </code>
             </mat-card-content>
         </mat-card>
+        <br><br>
         <mat-card>
             <mat-card-title>
-                <h4>Generate a HASH160 hash</h4>
+                Generate a HASH160 hash
             </mat-card-title>
             <mat-card-content>
-                <code>
-                    hash160 = Hash.sha256Ripemd160(Buffer.from('BSV is the high entropy information highway'));<br>
+                <pre><code>
+                    hash160 = Hash.sha256Ripemd160(Buffer.from('BSV is the high entropy information highway'));
                     hash160Test = Hash.ripemd160(this.sha256);
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     Result: {{ hash160.toString('hex') }}<br>
                     Result: {{ hash160Test.toString('hex') }}

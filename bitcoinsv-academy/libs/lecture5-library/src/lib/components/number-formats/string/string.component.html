@@ -1,22 +1,20 @@
         <mat-card>
             <mat-card-title>
-                <h4>Create a String and encode it with Base58 and Base58Check:</h4>
+                Create a String and encode it with Base58 and Base58Check:
             </mat-card-title>
             <mat-card-content>
-                <code>
-                    string = "I am string";<br>
-                    base58: string;<br>
-                    base58Check: string;<br><br>
+                <pre><code>
+                    string = "I am string";
+                    base58: string;
+                    base58Check: string;
 
 
                     constructor() {{ '{' }}
 
-                    &nbsp;this.base58 = Base58.fromBuffer(Buffer.from(this.string)).toString();<br>
-                    &nbsp;this.base58Check = Base58Check.fromBuffer(Buffer.from(this.string)).toString();<br>
+                        this.base58 = Base58.fromBuffer(Buffer.from(this.string)).toString();
+                        this.base58Check = Base58Check.fromBuffer(Buffer.from(this.string)).toString();
                     {{ '}' }}
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     <div>Result:</div>
                     <div>In Base58: {{ base58 }}</div>

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import {
-  Address,
   Bn,
-  KeyPair,
-  PrivKey,
-  TxBuilder,
-  TxOut,
-  Random,
   VarInt
 } from '@ts-bitcoin/core';
 
