@@ -1,24 +1,22 @@
         <mat-card>
             <mat-card-title>
-                <h4>Create a String and encode it with Base58 and Base58Check:</h4>
+                Create a String and encode it with Base58 and Base58Check:
             </mat-card-title>
             <mat-card-content>
-                <code>
-                    bigNum;<br>
-                    varInt;<br><br>
+                <pre><code>
+                    bigNum;
+                    varInt;
 
-                    constructor() {{ '{' }}<br>
+                    constructor() {{ '{' }}
 
-                    &nbsp;this.bigNum = new Bn(16899);<br>
-                    &nbsp;this.varInt = VarInt.fromBn(this.bigNum);<br>
+                        this.bigNum = new Bn(16899);
+                        this.varInt = VarInt.fromBn(this.bigNum);
 
                     {{ '}' }}
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     <div>Result:</div>
-                    <div>As a BigInt: {{ bigNum.toString('hex') }}</div>
+                    <div>As a BigInt (In Hex): {{ bigNum.toString('hex') }}</div>
                     <div>As a VarInt: {{ varInt.toString() }}</div>
                 </code>
             </mat-card-content>

@@ -1,0 +1,81 @@
+<mat-card>
+    <mat-card-title>
+        Create a Private Key
+    </mat-card-title>
+    <mat-card-content>
+        <div>
+            <pre><code>
+                this.privKey = PrivKey.fromRandom();
+            </code></pre>
+            <br><br>
+            <code>
+                <div>Result:</div>
+                <div>{{ privKey.toString() }}</div>
+            </code>
+        </div>
+    </mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+    <mat-card-title>
+        Create a Wif (Wallet Import Format Key)
+    </mat-card-title>
+    <mat-card-content>
+        <div>
+            <pre><code>
+                this.wif = this.privKey.toWif();
+            </code></pre>
+            <br><br>
+            <code>
+                <div>Result:</div>
+                <div>{{ privKey.toString() }}</div>
+            </code>
+        </div>
+    </mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+    <mat-card-title>
+        Generate a Bitcoin Address From a String
+    </mat-card-title>
+    <mat-card-content>
+        <div>
+            <pre><code>
+                  constructor() {{ '{' }}
+
+                      ...
+
+                      //Generate Address from string
+                      this.address = this.addressFromString(this.inputString);
+                  {{ '}' }}
+
+                  addressFromString(input_string: string): string {{ '{' }}
+
+                      const privKey = this.privKeyFromString(input_string);
+
+                      const pubKey = PubKey.fromPrivKey(privKey);
+
+                      return Address.fromPubKey(pubKey).toString();
+
+                  {{ '}' }}
+
+                  privKeyFromString(input_string: string): PrivKey {{ '{' }}
+
+                      const h = Hash.sha256(Buffer.from(input_string));
+
+                      const bn = Bn.fromBuffer(h);
+
+                      return PrivKey.fromBn(bn);
+                  {{ '}' }}
+            </code></pre>
+            <mat-form-field appearance='fill' (keyup)="onUserInput()">
+                <mat-label>Input String</mat-label>
+                <input matInput [(ngModel)]="inputString">
+            </mat-form-field>
+            <code>
+                <div>Result:</div>
+                <div>{{ address }}</div>
+            </code>
+        </div>
+    </mat-card-content>
+</mat-card>

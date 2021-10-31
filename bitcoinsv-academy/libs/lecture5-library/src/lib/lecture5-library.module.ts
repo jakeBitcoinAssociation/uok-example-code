@@ -35,7 +35,7 @@ export const bigNumbersRoutes: Route[] = [
       FixedPointComponent,
       FloatingPointComponent,
       StringComponent,
-      VarintComponent
+      VarintComponent,
   ],
 })
 export class Lecture5LibraryModule {}

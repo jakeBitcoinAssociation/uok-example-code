@@ -46,6 +46,16 @@
     "lecture5-library": {
       "tags": []
     },
+    "lecture6": {
+      "tags": []
+    },
+    "lecture6-e2e": {
+      "tags": [],
+      "implicitDependencies": ["lecture6"]
+    },
+    "lecture6-library": {
+      "tags": []
+    },
     "material": {
       "tags": []
     }

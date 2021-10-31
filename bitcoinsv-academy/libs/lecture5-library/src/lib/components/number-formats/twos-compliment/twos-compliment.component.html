@@ -1,25 +1,24 @@
         <mat-card>
             <mat-card-title>
-                <h4>Let's see the two's compliment of the number 243 (0xF3 in hex)</h4>
+                Let's see the two's compliment of the number 243 (0xF3 in hex)
             </mat-card-title>
             <mat-card-content>
-                <code>
+                <pre><code>
                     posNum
                     negNum
 
-                    constructor() {{ '{' }}<br>
-                    &nbsp;this.posNum = new Uint32Array(4);<br>
-                    &nbsp;this.negNum = new Uint32Array(4);<br>
+                    constructor() {{ '{' }}
 
-                    &nbsp;this.posNum[0] = 0xF3;<br>
-                    &nbsp;this.negNum[0] = 0xF3;<br>
+                        this.posNum = new Uint32Array(4);
+                        this.negNum = new Uint32Array(4);
 
-                    &nbsp;this.negNum[0] = this.negNum[0]*-1;<br>
+                        this.posNum[0] = 0xF3;
+                        this.negNum[0] = 0xF3;
+
+                        this.negNum[0] = this.negNum[0]*-1;
 
                     {{ '}' }}
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <div>Result:</div>
                 <div>243 as a positive binary number: {{ "000000000000000000000000" + posNum[0].toString(2) }}</div>
                 <div>243 as a negative binary number: {{ negNum[0].toString(2) }}</div>

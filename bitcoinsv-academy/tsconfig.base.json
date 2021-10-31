@@ -21,6 +21,9 @@
       "@bitcoinsv-academy/lecture5-library": [
         "libs/lecture5-library/src/index.ts"
       ],
+      "@bitcoinsv-academy/lecture6-library": [
+        "libs/lecture6-library/src/index.ts"
+      ],
       "@bitcoinsv-academy/material": ["libs/material/src/index.ts"]
     }
   },

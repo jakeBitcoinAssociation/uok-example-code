@@ -1,20 +1,19 @@
         <mat-card>
             <mat-card-title>
-                <h4>Satoshis expressed as unsigned integers</h4>
+                Satoshis expressed as unsigned integers
             </mat-card-title>
             <mat-card-content>
-                <code>
-                    allTheSatoshis: number;<br>
-                    halfTheSatoshis: number;<br><br>
+                <pre><code>
+                    allTheSatoshis: number;
+                    halfTheSatoshis: number;
 
-                    constructor() {{ '{' }}<br>
+                    constructor() {{ '{' }}
 
-                    &nbsp;this.allTheSatoshis = 0x1406F40;<br>
-                    &nbsp;this.halfTheSatoshis = this.allTheSatoshis*0.5<br>
+                        this.allTheSatoshis = 0x1406F40;
+                        this.halfTheSatoshis = this.allTheSatoshis*0.5
+
                     {{ '}' }}
-                </code>
-            </mat-card-content>
-            <mat-card-content>
+                </code></pre>
                 <code>
                     <div>Result</div>
                     <div>All the satoshis (binary): {{ allTheSatoshis.toString(2) }}</div>
