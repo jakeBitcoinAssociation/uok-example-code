@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -25,7 +26,8 @@ import { LayoutModule } from '@bitcoinsv-academy/layout';
     ),
     AuthModule,
     LayoutModule,
-    Lecture5LibraryModule
+    Lecture5LibraryModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
