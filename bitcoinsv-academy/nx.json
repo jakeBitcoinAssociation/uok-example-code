@@ -53,6 +53,9 @@
       "tags": [],
       "implicitDependencies": ["lecture6"]
     },
+    "lecture6-library": {
+      "tags": []
+    },
     "material": {
       "tags": []
     }

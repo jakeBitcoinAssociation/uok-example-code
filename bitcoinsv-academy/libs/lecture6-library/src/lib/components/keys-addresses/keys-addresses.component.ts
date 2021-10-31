@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {
+  Address,
+  Bn,
+  KeyPair,
+  PrivKey,
+  TxBuilder,
+  TxOut,
+  Random,
+  Base58,
+  Base58Check
+} from '@ts-bitcoin/core';
 
 @Component({
   selector: 'bitcoinsv-academy-keys-addresses',
   templateUrl: './keys-addresses.component.html',
   styleUrls: ['./keys-addresses.component.scss']
 })
-export class KeysAddressesComponent implements OnInit {
+export class KeysAddressesComponent {
 
-  constructor() { }
+    privKey = PrivKey.fromRandom();
 
-  ngOnInit(): void {
+
+
+  constructor() {
+      this.privKey = PrivKey.fromRandom();
   }
+
 
 }

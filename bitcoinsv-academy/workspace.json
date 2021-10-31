@@ -342,6 +342,31 @@
         }
       }
     },
+    "lecture6-library": {
+      "projectType": "library",
+      "root": "libs/lecture6-library",
+      "sourceRoot": "libs/lecture6-library/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lecture6-library"],
+          "options": {
+            "jestConfig": "libs/lecture6-library/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/lecture6-library/src/**/*.ts",
+              "libs/lecture6-library/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "material": {
       "projectType": "library",
       "root": "libs/material",
