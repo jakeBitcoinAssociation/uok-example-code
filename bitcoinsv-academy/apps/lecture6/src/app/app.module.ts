@@ -10,9 +10,10 @@ import {
     Lecture6LibraryModule
 } from '@bitcoinsv-academy/lecture6-library';
 import { LayoutModule } from '@bitcoinsv-academy/layout';
+import { PrivateKeyWifComponent } from './components/keys-addresses/private-key-wif/private-key-wif.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PrivateKeyWifComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
