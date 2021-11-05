@@ -33,6 +33,13 @@
     "data-models": {
       "tags": []
     },
+    "example-app": {
+      "tags": []
+    },
+    "example-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["example-app"]
+    },
     "layout": {
       "tags": []
     },

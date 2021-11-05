@@ -1,0 +1,12 @@
+<bitcoinsv-academy-layout>
+<button mat-button [routerLink]="['']" routerLinkActive="router-link-active">
+        <h1>Example App</h1>
+    </button>
+
+    <div class="right-nav">
+        <button mat-button *ngFor="let item of navigation" [routerLink]="[item.link]" routerLinkActive="active">
+            {{ item.label }}
+        </button>
+    </div>
+</bitcoinsv-academy-layout>
+<ng-content></ng-content>
