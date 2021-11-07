@@ -170,6 +170,31 @@
         }
       }
     },
+    "example-app-library": {
+      "projectType": "library",
+      "root": "libs/example-app-library",
+      "sourceRoot": "libs/example-app-library/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example-app-library"],
+          "options": {
+            "jestConfig": "libs/example-app-library/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/example-app-library/src/**/*.ts",
+              "libs/example-app-library/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "layout": {
       "projectType": "library",
       "root": "libs/layout",

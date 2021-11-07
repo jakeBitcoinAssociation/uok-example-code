@@ -17,6 +17,9 @@
     "paths": {
       "@bitcoinsv-academy/auth": ["libs/auth/src/index.ts"],
       "@bitcoinsv-academy/data-models": ["libs/data-models/src/index.ts"],
+      "@bitcoinsv-academy/example-app-library": [
+        "libs/example-app-library/src/index.ts"
+      ],
       "@bitcoinsv-academy/layout": ["libs/layout/src/index.ts"],
       "@bitcoinsv-academy/lecture5-library": [
         "libs/lecture5-library/src/index.ts"

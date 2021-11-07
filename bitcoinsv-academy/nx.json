@@ -40,6 +40,9 @@
       "tags": [],
       "implicitDependencies": ["example-app"]
     },
+    "example-app-library": {
+      "tags": []
+    },
     "layout": {
       "tags": []
     },
