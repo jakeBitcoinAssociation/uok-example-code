@@ -1,1 +1,36 @@
-<p>wallet works!</p>
+
+<mat-grid-list cols='1' rowHeight='15:1'>
+    <mat-grid-tile>
+        <h1>Wallet Example</h1>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>
+                Mnemonic (Bip39)
+            </mat-card-title>
+            <mat-card-content>
+                <h2>{{ mnemonic }}</h2>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>
+                Private Key (Testnet)
+            </mat-card-title>
+            <mat-card-content>
+                <h2>{{ testPrivKey }}</h2>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>
+                Address (Testnet)
+            </mat-card-title>
+            <mat-card-content>
+                <h2>{{ testAddress }}</h2>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Route } from '@angular/router';
 import { WalletComponent } from './components/wallet/wallet.component';
+import { MaterialModule } from '@bitcoinsv-academy/material';
 
 export const exampleAppLibraryRoutes: Route[] = [
     { path: '', redirectTo: 'wallet', pathMatch: 'full' },
@@ -9,7 +10,7 @@ export const exampleAppLibraryRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MaterialModule],
   declarations: [
     WalletComponent
   ],

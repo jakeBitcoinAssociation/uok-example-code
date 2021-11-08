@@ -7,6 +7,7 @@ import {
     exampleAppLibraryRoutes,
     ExampleAppLibraryModule } from '@bitcoinsv-academy/example-app-library';
 import { authRoutes, AuthModule } from '@bitcoinsv-academy/auth';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import { authRoutes, AuthModule } from '@bitcoinsv-academy/auth';
         { initialNavigation: 'enabled' }),
     AuthModule,
     LayoutModule,
-    ExampleAppLibraryModule
+    ExampleAppLibraryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

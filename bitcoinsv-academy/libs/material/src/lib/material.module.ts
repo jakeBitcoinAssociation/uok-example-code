@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { MatTabsModule } from '@angular/material/tabs';
        MatMenuModule,
        MatTableModule,
        MatSelectModule,
-       MatTabsModule
+       MatTabsModule,
+       MatGridListModule
   ],
   exports: [
       FlexLayoutModule,
@@ -42,7 +44,8 @@ import { MatTabsModule } from '@angular/material/tabs';
       MatMenuModule,
       MatTableModule,
       MatSelectModule,
-      MatTabsModule
+      MatTabsModule,
+      MatGridListModule
   ]
 })
 export class MaterialModule {}
