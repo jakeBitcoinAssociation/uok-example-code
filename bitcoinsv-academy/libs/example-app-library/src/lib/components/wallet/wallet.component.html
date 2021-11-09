@@ -1,36 +1,63 @@
 
-<mat-grid-list cols='1' rowHeight='15:1'>
-    <mat-grid-tile>
+<mat-grid-list cols='1' rowHeight='1:1'>
+    <mat-grid-tile-header>
         <h1>Wallet Example</h1>
-    </mat-grid-tile>
-    <mat-grid-tile>
+    </mat-grid-tile-header>
+    <mat-grid-tile-header>
+        <mat-card>
+            <mat-card-title>
+                Wallet Balance
+            </mat-card-title>
+            <mat-card-content>
+                <h2>&#8383;{{ balance }}</h2>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile-header>
+    <mat-grid-tile-header>
         <mat-card>
             <mat-card-title>
                 Mnemonic (Bip39)
             </mat-card-title>
             <mat-card-content>
-                <h2>{{ mnemonic }}</h2>
+                <mat-form-field appearance='fill'>
+                    <h2><input matInput [(ngModel)]="mnemonic"></h2>
+                </mat-form-field>
             </mat-card-content>
         </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
+    </mat-grid-tile-header>
+    <mat-grid-tile-header>
         <mat-card>
             <mat-card-title>
-                Private Key (Testnet)
+                Private Key
             </mat-card-title>
             <mat-card-content>
                 <h2>{{ testPrivKey }}</h2>
             </mat-card-content>
         </mat-card>
+    </mat-grid-tile-header>
+
+</mat-grid-list>
+<mat-grid-tile-header>
+    <mat-card>
+        <mat-card-title>
+            Address (Testnet)
+        </mat-card-title>
+        <mat-card-content>
+            <h2>{{ testAddress }}</h2>
+        </mat-card-content>
+    </mat-card>
+</mat-grid-tile-header>
+<mat-grid-list cols='4' rowHeight='4:1'>
+    <mat-grid-tile>
+        <button mat-raised-button> Generate Mnemonic</button>
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-card>
-            <mat-card-title>
-                Address (Testnet)
-            </mat-card-title>
-            <mat-card-content>
-                <h2>{{ testAddress }}</h2>
-            </mat-card-content>
-        </mat-card>
+        <button mat-raised-button> Build Wallet </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button> Get Transactions </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button> Send Transaction </button>
     </mat-grid-tile>
 </mat-grid-list>

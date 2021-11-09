@@ -14,6 +14,7 @@ export class WalletComponent implements OnInit {
     mnemonic: string;
     testPrivKey: PrivKey;
     testAddress: string;
+    balance: number;
 
   constructor() {
      const wallet = new Wallet("sport you scene actress crystal effort cotton garbage harsh salt way state");
@@ -21,8 +22,10 @@ export class WalletComponent implements OnInit {
      this.mnemonic = wallet.getMnemonic();
      this.testPrivKey = wallet.getTestPrivKey();
      this.testAddress = wallet.getTestAddress();
+     this.balance = 0;
 
   }
+
 
 
 

@@ -21,11 +21,11 @@ export class Wallet {
     private testPrivKey: PrivKey;
     private testAddress: string;
 
-    constructor(mnemonic: string) {
-        if(mnemonic === null)
-            this.mnemonic = this.generateNewMnemonic();
-        else
+    constructor(mnemonic?: string) {
+        if(mnemonic)
             this.mnemonic = mnemonic;
+        else
+            this.mnemonic = this.generateNewMnemonic();
 
         this.hdPrivKey = this.generateNewhdPriveKey();
         this.testPrivKey = this.generateNewPrivKey();
