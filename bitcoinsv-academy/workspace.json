@@ -535,6 +535,31 @@
           }
         }
       }
+    },
+    "whatsonchain-api": {
+      "projectType": "library",
+      "root": "libs/whatsonchain-api",
+      "sourceRoot": "libs/whatsonchain-api/src",
+      "prefix": "bitcoinsv-academy",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/whatsonchain-api"],
+          "options": {
+            "jestConfig": "libs/whatsonchain-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/whatsonchain-api/src/**/*.ts",
+              "libs/whatsonchain-api/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

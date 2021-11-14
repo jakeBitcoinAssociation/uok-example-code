@@ -4,6 +4,7 @@ import { RouterModule, Route } from '@angular/router';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { MaterialModule } from '@bitcoinsv-academy/material';
 import { FormsModule } from '@angular/forms';
+import { WhatsonchainApiModule } from '@bitcoinsv-academy/whatsonchain-api';
 
 export const exampleAppLibraryRoutes: Route[] = [
     { path: '', redirectTo: 'wallet', pathMatch: 'full' },
@@ -11,7 +12,13 @@ export const exampleAppLibraryRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, MaterialModule, FormsModule],
+  imports: [
+      CommonModule,
+      RouterModule,
+      MaterialModule,
+      FormsModule,
+      WhatsonchainApiModule
+  ],
   declarations: [
     WalletComponent
   ],

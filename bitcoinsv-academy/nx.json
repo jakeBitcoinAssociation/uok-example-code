@@ -68,6 +68,9 @@
     },
     "material": {
       "tags": []
+    },
+    "whatsonchain-api": {
+      "tags": []
     }
   }
 }

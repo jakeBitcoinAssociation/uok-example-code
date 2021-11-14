@@ -27,7 +27,10 @@
       "@bitcoinsv-academy/lecture6-library": [
         "libs/lecture6-library/src/index.ts"
       ],
-      "@bitcoinsv-academy/material": ["libs/material/src/index.ts"]
+      "@bitcoinsv-academy/material": ["libs/material/src/index.ts"],
+      "@bitcoinsv-academy/whatsonchain-api": [
+        "libs/whatsonchain-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
