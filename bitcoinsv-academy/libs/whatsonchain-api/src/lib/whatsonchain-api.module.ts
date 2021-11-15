@@ -7,13 +7,16 @@ import { MaterialModule } from '@bitcoinsv-academy/material';
 @NgModule({
   imports: [
       CommonModule,
-      HttpClientModule
+      HttpClientModule,
+      MaterialModule,
   ],
   declarations: [
-      WhatsonchainApiComponent
+      WhatsonchainApiComponent,
   ],
   exports: [
-      WhatsonchainApiComponent
+      WhatsonchainApiComponent,
+  ],
+  providers: [
   ]
 
 })

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Wallet } from './wallet.model';
+import { WhatsonchainApiService } from '../../../../../whatsonchain-api/src/lib/services/whatsonchain-api.service';
+import { HttpClient } from '@angular/common/http';
 import {
+
+
   PrivKey,
 } from '@ts-bitcoin/core';
 
@@ -14,23 +18,33 @@ export class WalletComponent implements OnInit {
     mnemonic: string;
     testPrivKey: PrivKey;
     testAddress: string;
-    balance: number;
+    balance = 0;
+    private wallet: Wallet;
 
-  constructor() {
-     const wallet = new Wallet("sport you scene actress crystal effort cotton garbage harsh salt way state");
+  constructor(private http: HttpClient, private whatsonchainApi: WhatsonchainApiService) {
+     this.wallet = new Wallet("sport you scene actress crystal effort cotton garbage harsh salt way state");
 
-     this.mnemonic = wallet.getMnemonic();
-     this.testPrivKey = wallet.getTestPrivKey();
-     this.testAddress = wallet.getTestAddress();
-     this.balance = 0;
+     this.mnemonic = this.wallet.getMnemonic();
+     this.testPrivKey = this.wallet.getTestPrivKey();
+     this.testAddress = this.wallet.getTestAddress();
+
+     this.whatsonchainApi.address = this.wallet.getTestAddress();
 
   }
 
 
+  fetchBalance() {
+      this.whatsonchainApi.fetchBalance()
+      .subscribe( balance => {
+          console.log(balance[0]);
+          this.balance = balance[0];
+      });
+  }
 
 
 
   ngOnInit(): void {
+      this.fetchBalance();
   }
 
 }
