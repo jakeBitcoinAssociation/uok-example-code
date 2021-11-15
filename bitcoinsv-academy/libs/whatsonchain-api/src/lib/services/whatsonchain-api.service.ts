@@ -8,7 +8,6 @@ import { UTXOModel } from '../../../../example-app-library/src/lib/components/wa
 })
 export class WhatsonchainApiService {
 
-    balance = 0;
     address = "";
 
     constructor(private http: HttpClient) {}
@@ -36,7 +35,6 @@ export class WhatsonchainApiService {
           Object.values(responseData).forEach(value => {
                 balanceArray.push(value);
             })
-            this.balance = balanceArray[0];
           return balanceArray;
       }));
   }

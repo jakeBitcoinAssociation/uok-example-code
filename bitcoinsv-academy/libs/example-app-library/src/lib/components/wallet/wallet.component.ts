@@ -43,7 +43,7 @@ export class WalletComponent implements OnInit {
       this.whatsonchainApi.fetchUTXOs()
       .subscribe( UTXOs => {
           console.log(UTXOs);
-          //this.UTXOs = UTXOs;
+          this.UTXOs = UTXOs;
       });
   }
 
