@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Wallet } from './wallet.model';
 import { WhatsonchainApiService } from '../../../../../whatsonchain-api/src/lib/services/whatsonchain-api.service';
 import { HttpClient } from '@angular/common/http';
+import { UTXOModel } from './utxo.model';
 import {
-
-
   PrivKey,
 } from '@ts-bitcoin/core';
 
@@ -19,6 +18,7 @@ export class WalletComponent implements OnInit {
     testPrivKey: PrivKey;
     testAddress: string;
     balance = 0;
+    UTXOs: UTXOModel[] = []
     private wallet: Wallet;
 
   constructor(private http: HttpClient, private whatsonchainApi: WhatsonchainApiService) {
@@ -27,7 +27,6 @@ export class WalletComponent implements OnInit {
      this.mnemonic = this.wallet.getMnemonic();
      this.testPrivKey = this.wallet.getTestPrivKey();
      this.testAddress = this.wallet.getTestAddress();
-
      this.whatsonchainApi.address = this.wallet.getTestAddress();
 
   }
@@ -36,8 +35,15 @@ export class WalletComponent implements OnInit {
   fetchBalance() {
       this.whatsonchainApi.fetchBalance()
       .subscribe( balance => {
-          console.log(balance[0]);
           this.balance = balance[0];
+      });
+  }
+
+  fetchUTXOs() {
+      this.whatsonchainApi.fetchUTXOs()
+      .subscribe( UTXOs => {
+          console.log(UTXOs);
+          //this.UTXOs = UTXOs;
       });
   }
 
@@ -45,6 +51,7 @@ export class WalletComponent implements OnInit {
 
   ngOnInit(): void {
       this.fetchBalance();
+      this.fetchUTXOs();
   }
 
 }
