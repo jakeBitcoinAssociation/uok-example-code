@@ -6,7 +6,6 @@
     <br>
     <mat-grid-tile-header>
         <bitcoinsv-academy-wallet-balance [walletBalance]="balance"></bitcoinsv-academy-wallet-balance>
-
     </mat-grid-tile-header>
     <br>
     <mat-grid-tile-header>
@@ -32,6 +31,10 @@
             <h2>{{ testAddress }}</h2>
         </mat-card-content>
     </mat-card>
+</mat-grid-tile-header>
+<br>
+<mat-grid-tile-header>
+    <bitcoinsv-academy-utxo-list class='utxo-list' [UTXOs]="UTXOs"></bitcoinsv-academy-utxo-list>
 </mat-grid-tile-header>
 <mat-grid-list cols='4' rowHeight='4:1'>
     <mat-grid-tile>

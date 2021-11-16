@@ -6,6 +6,7 @@ import { KeysAddressesComponent } from './components/keys-addresses/keys-address
 import { MaterialModule } from '@bitcoinsv-academy/material';
 import { PrivateKeyWifComponent } from './components/keys-addresses/private-key-wif/private-key-wif.component';
 import { AddressFromStringComponent } from './components/keys-addresses/address-from-string/address-from-string.component';
+import { TestnetPrivateKeyComponent } from './components/keys-addresses/testnet-private-key/testnet-private-key.component';
 
 export const lecture6LibraryRoutes: Route[] = [
     { path: '', redirectTo: 'keys-addresses', pathMatch: 'full' },
@@ -21,7 +22,8 @@ export const lecture6LibraryRoutes: Route[] = [
   declarations: [
     KeysAddressesComponent,
     PrivateKeyWifComponent,
-    AddressFromStringComponent
+    AddressFromStringComponent,
+    TestnetPrivateKeyComponent
   ],
 })
 export class Lecture6LibraryModule {}

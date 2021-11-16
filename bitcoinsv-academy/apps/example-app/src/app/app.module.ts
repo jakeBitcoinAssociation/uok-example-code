@@ -10,9 +10,10 @@ import {
     ExampleAppLibraryModule } from '@bitcoinsv-academy/example-app-library';
 import { authRoutes, AuthModule } from '@bitcoinsv-academy/auth';
 import { HttpClientModule } from '@angular/common/http';
+import { UtxoListComponent } from './components/wallet/utxo-list/utxo-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UtxoListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

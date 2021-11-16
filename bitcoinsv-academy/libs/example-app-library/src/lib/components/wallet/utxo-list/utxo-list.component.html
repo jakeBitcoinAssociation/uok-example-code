@@ -1,0 +1,35 @@
+
+<mat-card>
+    <mat-card-title>
+        UTXO List
+    </mat-card-title>
+    <mat-card-content>
+        <table mat-table [dataSource]="UTXOs" class="mat-elevation-z8 utxo-list">
+
+            <ng-container matColumnDef="height">
+                <th mat-header-cell *matHeaderCellDef>Height</th>
+                <td mat-cell *matCellDef="let UTXO"> {{UTXO.height}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="txPos">
+                <th mat-header-cell *matHeaderCellDef>TXPosition</th>
+                <td mat-cell *matCellDef="let UTXO"> {{UTXO.tx_pos}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="txHash">
+                <th mat-header-cell *matHeaderCellDef>TXHash</th>
+                <td mat-cell *matCellDef="let UTXO"> {{UTXO.tx_hash}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+                <th mat-header-cell *matHeaderCellDef>Value</th>
+                <td mat-cell *matCellDef="let UTXO"> {{UTXO.value}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['height', 'txPos', 'txHash', 'value']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['height', 'txPos', 'txHash', 'value'];"></tr>
+
+        </table>
+    </mat-card-content>
+</mat-card>
+
