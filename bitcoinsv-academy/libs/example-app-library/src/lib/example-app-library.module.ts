@@ -5,6 +5,7 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { MaterialModule } from '@bitcoinsv-academy/material';
 import { FormsModule } from '@angular/forms';
 import { WhatsonchainApiModule } from '@bitcoinsv-academy/whatsonchain-api';
+import { WalletBalanceComponent } from './components/wallet/wallet-balance/wallet-balance.component';
 
 export const exampleAppLibraryRoutes: Route[] = [
     { path: '', redirectTo: 'wallet', pathMatch: 'full' },
@@ -20,7 +21,8 @@ export const exampleAppLibraryRoutes: Route[] = [
       WhatsonchainApiModule
   ],
   declarations: [
-    WalletComponent
+    WalletComponent,
+    WalletBalanceComponent
   ],
 })
 export class ExampleAppLibraryModule {}
