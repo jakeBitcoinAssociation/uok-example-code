@@ -1,0 +1,53 @@
+
+<mat-grid-list cols='1' rowHeight='1:1'>
+    <mat-grid-tile-header>
+        <h1>Wallet Example</h1>
+    </mat-grid-tile-header>
+    <br>
+    <mat-grid-tile-header>
+        <bitcoinsv-academy-wallet-balance [walletBalance]="balance"></bitcoinsv-academy-wallet-balance>
+    </mat-grid-tile-header>
+    <br>
+    <mat-grid-tile-header>
+        <mat-card>
+            <mat-card-title>
+                Mnemonic (Bip39)
+            </mat-card-title>
+            <mat-card-content>
+                <mat-form-field appearance='fill'>
+                    <h2><input matInput [(ngModel)]="mnemonic"></h2>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile-header>
+    <br>
+</mat-grid-list>
+<mat-grid-tile-header>
+    <mat-card>
+        <mat-card-title>
+            Address (Testnet)
+        </mat-card-title>
+        <mat-card-content>
+            <h2>{{ testAddress }}</h2>
+        </mat-card-content>
+    </mat-card>
+</mat-grid-tile-header>
+<br>
+<mat-grid-tile-header>
+    <bitcoinsv-academy-utxo-list class='utxo-list' *ngIf="UTXOs" [UTXOs]="UTXOs">
+    </bitcoinsv-academy-utxo-list>
+</mat-grid-tile-header>
+<mat-grid-list cols='4' rowHeight='4:1'>
+    <mat-grid-tile>
+        <button mat-raised-button (click)="generateNewWallet()">Generate New Wallet</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button (click)="generateDefaultWallet()">Build Default Wallet</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button (click)="buildWalletFromMnemonic()">Build Wallet</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button> Send Transaction </button>
+    </mat-grid-tile>
+</mat-grid-list>

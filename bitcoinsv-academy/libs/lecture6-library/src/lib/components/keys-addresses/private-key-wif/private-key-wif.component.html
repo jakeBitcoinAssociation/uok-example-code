@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>
+        Create a Private Key
+    </mat-card-title>
+    <mat-card-content>
+        <div>
+            <pre><code>
+                this.privKey = PrivKey.fromRandom();
+            </code></pre>
+            <br><br>
+            <code>
+                <div>Result:</div>
+                <div>{{ privKey.toString() }}</div>
+            </code>
+        </div>
+    </mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+    <mat-card-title>
+        Create a Wif (Wallet Import Format Key)
+    </mat-card-title>
+    <mat-card-content>
+        <div>
+            <pre><code>
+                this.wif = this.privKey.toWif();
+            </code></pre>
+            <br><br>
+            <code>
+                <div>Result:</div>
+                <div>{{ privKey.toString() }}</div>
+            </code>
+        </div>
+    </mat-card-content>
+</mat-card>
