@@ -2,6 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { UTXOModel } from '../../../../example-app-library/src/lib/components/wallet/utxo.model';
+import { Transaction } from '../../../../example-app-library/src/lib/components/wallet/transaction.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { UTXOModel } from '../../../../example-app-library/src/lib/components/wa
 export class WhatsonchainApiService {
 
     address = "";
+    transactions: UTXOModel[] = [];
 
     constructor(private http: HttpClient) {}
 
@@ -26,6 +28,17 @@ export class WhatsonchainApiService {
       }));
   }
 
+  fetchTransaction(txHash: string) {
+      return this.http.get(
+          'https://api.whatsonchain.com/v1/bsv/test/tx/hash/' + txHash
+      )
+      .pipe(map(responseData => {
+          const transaction: Transaction = new Transaction();
+                Object.assign(transaction, responseData);
+          return transaction;
+      }));
+  }
+
   fetchBalance(){
       return this.http.get(
           'https://api.whatsonchain.com/v1/bsv/test/address/' + this.address + '/balance'
@@ -38,4 +51,10 @@ export class WhatsonchainApiService {
           return balanceArray;
       }));
   }
+
+  /*postTransaction() {
+      this.http.post(
+          'https://api.whatsonchain.com/v1/bsv/test/tx/raw'
+      )
+  }*/
 }

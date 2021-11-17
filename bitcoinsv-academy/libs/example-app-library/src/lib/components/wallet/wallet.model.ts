@@ -1,15 +1,6 @@
 import {
   Address,
-  Bn,
-  KeyPair,
   PrivKey,
-  PubKey,
-  TxBuilder,
-  TxOut,
-  Random,
-  Base58,
-  Base58Check,
-  Hash,
   Bip39,
   Bip32
 } from '@ts-bitcoin/core';

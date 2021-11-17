@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { WhatsonchainApiModule } from '@bitcoinsv-academy/whatsonchain-api';
 import { WalletBalanceComponent } from './components/wallet/wallet-balance/wallet-balance.component';
 import { UtxoListComponent } from './components/wallet/utxo-list/utxo-list.component';
+import { TransactionListComponent } from './components/wallet/transaction-list/transaction-list.component';
 
 export const exampleAppLibraryRoutes: Route[] = [
     { path: '', redirectTo: 'wallet', pathMatch: 'full' },
@@ -24,7 +25,8 @@ export const exampleAppLibraryRoutes: Route[] = [
   declarations: [
     WalletComponent,
     WalletBalanceComponent,
-    UtxoListComponent
+    UtxoListComponent,
+    TransactionListComponent
   ],
 })
 export class ExampleAppLibraryModule {}

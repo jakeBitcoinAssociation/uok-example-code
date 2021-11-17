@@ -34,17 +34,18 @@
 </mat-grid-tile-header>
 <br>
 <mat-grid-tile-header>
-    <bitcoinsv-academy-utxo-list class='utxo-list' [UTXOs]="UTXOs"></bitcoinsv-academy-utxo-list>
+    <bitcoinsv-academy-utxo-list class='utxo-list' *ngIf="UTXOs" [UTXOs]="UTXOs">
+    </bitcoinsv-academy-utxo-list>
 </mat-grid-tile-header>
 <mat-grid-list cols='4' rowHeight='4:1'>
     <mat-grid-tile>
-        <button mat-raised-button> Generate Mnemonic</button>
+        <button mat-raised-button (click)="generateNewWallet()">Generate New Wallet</button>
     </mat-grid-tile>
     <mat-grid-tile>
-        <button mat-raised-button> Build Wallet </button>
+        <button mat-raised-button (click)="generateDefaultWallet()">Build Default Wallet</button>
     </mat-grid-tile>
     <mat-grid-tile>
-        <button mat-raised-button> Get Transactions </button>
+        <button mat-raised-button (click)="buildWalletFromMnemonic()">Build Wallet</button>
     </mat-grid-tile>
     <mat-grid-tile>
         <button mat-raised-button> Send Transaction </button>
