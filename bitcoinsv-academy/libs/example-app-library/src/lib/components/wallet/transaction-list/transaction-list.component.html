@@ -3,7 +3,8 @@
         Transaction List
     </mat-card-title>
     <mat-card-content>
-        <table mat-table *ngIf="transactions.length !== 0" [dataSource]="transactions" class="mat-elevation-z8 transaction-list">
+
+        <table  mat-table [dataSource]="transactions" class="mat-elevation-z8 transaction-list">
 
             <ng-container matColumnDef="txid">
                 <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -12,7 +13,7 @@
 
             <ng-container matColumnDef="size">
                 <th mat-header-cell *matHeaderCellDef>Size</th>
-                <td mat-cell *matCellDef="let transaction"> {{transaction.size}} </td>
+                <td mat-cell *matCellDef="let transaction"> {{transaction.s}} </td>
             </ng-container>
 
             <ng-container matColumnDef="version">
@@ -32,7 +33,7 @@
 
             <ng-container matColumnDef="time">
                 <th mat-header-cell *matHeaderCellDef>Time</th>
-                <td mat-cell *matCellDef="let transaction"> {{transaction.time}} </td>
+                <td mat-cell *matCellDef="let transaction"> {{transaction.t}} </td>
             </ng-container>
 
             <ng-container matColumnDef="blocktime">
@@ -40,25 +41,9 @@
                 <td mat-cell *matCellDef="let transaction"> {{transaction.blocktime}} </td>
             </ng-container>
 
-            <tr mat-header-row *matHeaderRowDef="[
-                'txid',
-                'size',
-                'version',
-                'locktime',
-                'confirmations',
-                'time',
-                'blocktime'
-                ]">
+            <tr mat-header-row *matHeaderRowDef="columnDef">
             </tr>
-            <tr mat-row *matRowDef="let row; columns: [
-                'txid',
-                'size',
-                'version',
-                'locktime',
-                'confirmations',
-                'time',
-                'blocktime'
-                ]">
+            <tr mat-row *matRowDef="let row; columns: columnDef;">
             </tr>
         </table>
     </mat-card-content>

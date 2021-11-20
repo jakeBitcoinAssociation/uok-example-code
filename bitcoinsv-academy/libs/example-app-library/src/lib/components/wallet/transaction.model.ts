@@ -1,18 +1,32 @@
-export class Transaction {
+export class TransactionModel {
 
     txid = "";
-    hash = "";
-    size = "";
+    h = "";
+    s = "";
     version = "";
     locktime = "";
     vin: string[] = [];
     vout: string[] = [];
     blockhash = "";
     confirmations = "";
-    time = "";
+    t = "";
     blocktime = "";
 
-    constructor(txid?: string, hash?: string, size?: string, version?: string,
+    constructor(txid: string, hash: string, size: string, version: string, locktime: string, vin: string[], vout: string[], blockhash: string, confirmations: string, time: string, blocktime: string) {
+        this.txid = txid;
+        this.h = hash;
+        this.s = size;
+        this.version = version;
+        this.locktime = locktime;
+        this.vin = vin;
+        this.vout = vout;
+        this.blockhash = blockhash;
+        this.confirmations = confirmations;
+        this.t = time;
+        this.blocktime = blocktime
+    }
+
+    /*constructor(txid?: string, hash?: string, size?: string, version?: string,
                locktime?: string, vin?: string[], vout?: string[], blockhash?: string,
                confirmations?: string, time?: string, blocktime?: string) {
 
@@ -70,6 +84,6 @@ export class Transaction {
             this.blocktime = blocktime;
         else
             this.blocktime = "";
-    }
+    }*/
 
 }

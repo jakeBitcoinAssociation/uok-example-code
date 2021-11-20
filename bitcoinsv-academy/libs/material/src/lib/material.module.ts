@@ -29,7 +29,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
        MatTableModule,
        MatSelectModule,
        MatTabsModule,
-       MatGridListModule
+       MatGridListModule,
   ],
   exports: [
       FlexLayoutModule,
@@ -45,7 +45,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
       MatTableModule,
       MatSelectModule,
       MatTabsModule,
-      MatGridListModule
+      MatGridListModule,
   ]
 })
 export class MaterialModule {}

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input} from '@angular/core';
-import { Transaction } from '../transaction.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { TransactionModel } from '../transaction.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'bitcoinsv-academy-transaction-list',
@@ -8,14 +9,27 @@ import { Transaction } from '../transaction.model';
 })
 export class TransactionListComponent implements OnInit {
 
-  @Input() transactions: Transaction[] = [];
+  @Input() transactions: TransactionModel[];
 
+  columnDef: string[];
 
-  constructor() { }
-
+  constructor() {
+      this.transactions = [];
+      this.columnDef = [
+                'txid',
+                'size',
+                'version',
+                'locktime',
+                'confirmations',
+                'time',
+                'blocktime'
+      ]
+  }
 
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+  }
 
 }
