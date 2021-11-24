@@ -7,3 +7,14 @@
 .mat-header-cell {
     text-align: center;
 }
+
+.json-text {
+    text-align: left;
+}
+
+td, th {
+    white-space: normal;
+    max-width: 200px;
+    overflow: scroll;
+
+}

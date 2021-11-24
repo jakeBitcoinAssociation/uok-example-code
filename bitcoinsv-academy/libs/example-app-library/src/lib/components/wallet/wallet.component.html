@@ -1,11 +1,11 @@
-
 <mat-grid-list cols='1' rowHeight='1:1'>
     <mat-grid-tile-header>
         <h1>Wallet Example</h1>
     </mat-grid-tile-header>
     <br>
     <mat-grid-tile-header>
-        <bitcoinsv-academy-wallet-balance [walletBalance]="balance"></bitcoinsv-academy-wallet-balance>
+        <bitcoinsv-academy-wallet-balance [walletBalance]="balance">
+        </bitcoinsv-academy-wallet-balance>
     </mat-grid-tile-header>
     <br>
     <mat-grid-tile-header>
@@ -34,7 +34,9 @@
 </mat-grid-tile-header>
 <br>
 <mat-grid-tile-header>
-    <bitcoinsv-academy-transaction-list class='transaction-list' [transactions]="transactions">
+    <bitcoinsv-academy-transaction-list
+        class='transaction-list'
+        [transactions]="transactions">
     </bitcoinsv-academy-transaction-list>
 </mat-grid-tile-header>
 <br>

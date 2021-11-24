@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TransactionModel } from '../transaction.model';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'bitcoinsv-academy-transaction-list',
@@ -20,6 +19,8 @@ export class TransactionListComponent implements OnInit {
                 'size',
                 'version',
                 'locktime',
+                'vin',
+                'vout',
                 'confirmations',
                 'time',
                 'blocktime'
