@@ -34,7 +34,12 @@
 </mat-grid-tile-header>
 <br>
 <mat-grid-tile-header>
-    <bitcoinsv-academy-utxo-list class='utxo-list' *ngIf="UTXOs" [UTXOs]="UTXOs">
+    <bitcoinsv-academy-transaction-list class='transaction-list' [transactions]="transactions">
+    </bitcoinsv-academy-transaction-list>
+</mat-grid-tile-header>
+<br>
+<mat-grid-tile-header>
+    <bitcoinsv-academy-utxo-list class='utxo-list' [UTXOs]="UTXOs">
     </bitcoinsv-academy-utxo-list>
 </mat-grid-tile-header>
 <mat-grid-list cols='4' rowHeight='4:1'>

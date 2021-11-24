@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges} from '@angular/core';
 import { UTXOModel } from '../utxo.model';
 
 @Component({
@@ -14,6 +14,12 @@ export class UtxoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChange(changes: SimpleChanges) {
+    if(changes.transactions) {
+        this.UTXOs = changes.UTXOs.currentValue;
+    }
   }
 
 }
