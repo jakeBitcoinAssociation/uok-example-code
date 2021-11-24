@@ -13,7 +13,7 @@
 
             <ng-container matColumnDef="size">
                 <th mat-header-cell *matHeaderCellDef>Size</th>
-                <td mat-cell *matCellDef="let transaction"> {{transaction.s}} </td>
+                <td mat-cell *matCellDef="let transaction"> {{transaction.size}} </td>
             </ng-container>
 
             <ng-container matColumnDef="version">
@@ -26,6 +26,16 @@
                 <td mat-cell *matCellDef="let transaction"> {{transaction.locktime}} </td>
             </ng-container>
 
+            <ng-container matColumnDef="vin">
+                <th mat-header-cell *matHeaderCellDef>Transaction Inputs</th>
+                <td mat-cell *matCellDef="let transaction"> <pre class="json-text">{{transaction.vin | json}}</pre> </td>
+            </ng-container>
+
+            <ng-container matColumnDef="vout">
+                <th mat-header-cell *matHeaderCellDef>UTXOs</th>
+                <td mat-cell *matCellDef="let transaction"> <pre class="json-text">{{transaction.vout | json }}</pre> </td>
+            </ng-container>
+
             <ng-container matColumnDef="confirmations">
                 <th mat-header-cell *matHeaderCellDef>Confirmations</th>
                 <td mat-cell *matCellDef="let transaction"> {{transaction.confirmations}} </td>
@@ -33,7 +43,7 @@
 
             <ng-container matColumnDef="time">
                 <th mat-header-cell *matHeaderCellDef>Time</th>
-                <td mat-cell *matCellDef="let transaction"> {{transaction.t}} </td>
+                <td mat-cell *matCellDef="let transaction"> {{transaction.time}} </td>
             </ng-container>
 
             <ng-container matColumnDef="blocktime">
