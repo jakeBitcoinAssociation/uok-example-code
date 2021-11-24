@@ -81,6 +81,7 @@ export class WalletComponent implements OnInit {
 
   fetchTransactions() {
       const txHashes: any[] = [];
+      this.transactions = [];
       this.UTXOs.forEach(utxo => {
           txHashes.push(utxo.tx_hash);
       });
